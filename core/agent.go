@@ -1,18 +1,20 @@
 package core
 
-type IAgent interface {
+type WorkerInterface interface {
 	Exec() error
 }
 
-type Agent struct {
-	Name        string
-	Role        string
-	Description string
-	Params      map[string]any
-	Prompt      string
+type Worker struct {
+	Name            string
+	Goal            string
+	Role            string
+	RoleDescription string
+	Description     string
+	Params          map[string]any
+	Prompt          string
 }
 
-type AgentParams struct {
+type WorkerParams struct {
 	Name        string
 	ParamType   string
 	Description string
